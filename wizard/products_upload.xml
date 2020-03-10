@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="upload_products_wizard_form" model="ir.ui.view">
+            <field name="name">products Upload Data</field>
+            <field name="model">drops.products.upload</field>
+            <field name="arch" type="xml">
+                <form string="Application Summary Parameters">
+                    <group>
+                        <field name="data" filename="filename"/>
+                        <field name="filename" invisible="1"/>
+                        <field name="overwrite" groups="base.group_no_one"/>
+                    </group>
+                    <div>
+                        Columns Headers Are Required. <br></br>
+                        <b>COL 1: </b> products ID (product_id) <br></br>
+                        <b>COL 2: </b> products Name English (name)  <br></br>
+                        <b>COL 3: </b> products Name Arabic (name_ar) <br></br>
+                        <b>COL 4: </b> products Category ID (category_id)  <br></br>
+                        <b>COL 5: </b> products Item Number (item_number)  <br></br>
+                        <b>COL 6: </b> products Description (description)  <br></br>
+                        <b>COL 7: </b> products price (price)  <br></br>
+                        <b>COL 8: </b> products cost (cost_price)  <br></br>
+                    </div>
+                    <footer>
+                        <button name="import_data" string="_Upload Data" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="upload_products_action_window" model="ir.actions.act_window">
+            <field name="name">products Upload Data</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">drops.products.upload</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="upload_products_wizard_form"/>
+            <field name="target">new</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

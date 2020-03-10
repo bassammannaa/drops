@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+        <menuitem id="drops_menu_main"
+                  name="Drops Configurations"
+                  parent="base.menu_custom"
+                  sequence="0"/>
+
+        <menuitem id="upload_vendors_main_menu"
+                  name="Upload Vendors"
+                  parent="drops.drops_menu_main"
+                  action="upload_vendors_action_window"
+                  sequence="0"/>
+
+        <menuitem id="upload_product_category_main_menu"
+                  name="Upload Product Category"
+                  parent="drops.drops_menu_main"
+                  action="upload_product_category_action_window"
+                  sequence="1"/>
+        <menuitem id="upload_products_main_menu"
+                  name="Upload Products"
+                  parent="drops.drops_menu_main"
+                  action="upload_products_action_window"
+                  sequence="2"/>
+
+    </data>
+</odoo>

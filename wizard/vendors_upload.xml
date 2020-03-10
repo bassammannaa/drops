@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="upload_vendors_wizard_form" model="ir.ui.view">
+            <field name="name">Vendors Upload Data</field>
+            <field name="model">drops.vendors.upload</field>
+            <field name="arch" type="xml">
+                <form string="Application Summary Parameters">
+                    <group>
+                        <field name="data" filename="filename"/>
+                        <field name="filename" invisible="1"/>
+                        <field name="overwrite" groups="base.group_no_one"/>
+                    </group>
+                    <div>
+                        Columns Headers Are Required. <br></br>
+                        <b>COL 1: </b> Vendors ID (shop_id) <br></br>
+                        <b>COL 2: </b> Vendors Name English (name)  <br></br>
+                        <b>COL 3: </b> Vendors Name Arabic (name_ar) <br></br>
+                        <b>COL 4: </b> Vendors Email (email_1)  <br></br>
+                        <b>COL 5: </b> Vendors Phone (phone_1)  <br></br>
+                        <b>COL 6: </b> Vendors Mobile (phone_2)  <br></br>
+                        <b>COL 7: </b> Vendors Status (status)  <br></br>
+                    </div>
+                    <footer>
+                        <button name="import_data" string="_Upload Data" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="upload_vendors_action_window" model="ir.actions.act_window">
+            <field name="name">Vendors Upload Data</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">drops.vendors.upload</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="upload_vendors_wizard_form"/>
+            <field name="target">new</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
