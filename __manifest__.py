@@ -10,7 +10,7 @@
         Long description of module's purpose
     """,
 
-    'author': "Medhat Mannaa1",
+    'author': "Drops group",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
